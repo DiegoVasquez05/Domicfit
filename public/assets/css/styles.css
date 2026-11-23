@@ -49,7 +49,7 @@ h3 { font-size: 26px; }
 
 /* Trazo de pincel detrás de una palabra */
 .pincel { position: relative; z-index: 0; display: inline-block; color: #111; padding: .04em .22em .02em .12em; margin: 0 .04em; white-space: nowrap; }
-.pincel::before { content: ""; position: absolute; inset: -.04em -.12em -.06em -.1em; background: url("../img/pincel.svg") center / 100% 100% no-repeat; z-index: -1; transform: rotate(-1.2deg); }
+.pincel::before { content: ""; position: absolute; inset: -.04em -.2em -.06em -.1em; background: url("../img/pincel.svg") center / 100% 100% no-repeat; z-index: -1; transform: rotate(-1.2deg); }
 .subrayado { color: var(--amarillo); }
 
 /* Botones */
@@ -278,7 +278,8 @@ a.dato:hover { border-color: var(--amarillo); }
 .pagina-simple { min-height: 100vh; display: flex; flex-direction: column; }
 .pagina-simple main { flex: 1; padding: 40px 0 80px; }
 .pasos { display: grid; gap: 24px; }
-@media (min-width: 980px) { .pasos { grid-template-columns: 1fr 360px; align-items: start; } .resumen { position: sticky; top: 92px; } }
+.pasos > * { min-width: 0; }
+@media (min-width: 980px) { .pasos { grid-template-columns: minmax(0, 1fr) 360px; align-items: start; } .resumen { position: sticky; top: 92px; } }
 .paso { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); padding: 24px 20px; }
 .paso + .paso { margin-top: 16px; }
 .paso h2 { font-size: 30px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
