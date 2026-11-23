@@ -1,0 +1,35 @@
+:root { --fondo:#0B0B0A; --tarjeta:#171714; --amarillo:#FFCF23; --texto:#F4F1E6; --gris:#A9A594; --borde:#2a2a25; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fondo); color: var(--texto); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: var(--amarillo); }
+h1, h2 { margin: 0 0 12px; }
+h2 { font-size: 20px; margin-top: 32px; }
+.barra { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--tarjeta); border-bottom: 1px solid var(--borde); }
+.barra nav { display: flex; flex-wrap: wrap; gap: 14px; }
+.barra a { text-decoration: none; color: var(--gris); }
+.barra a.activo, .barra a:hover { color: var(--amarillo); }
+main { max-width: 900px; margin: 0 auto; padding: 8px 16px 48px; }
+.tarjeta { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 10px; padding: 14px 16px; }
+.tarjeta p { margin: 4px 0; }
+.lista { display: grid; gap: 12px; }
+.fila { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+.fecha { color: var(--amarillo); font-size: 16px; }
+.etiqueta { font-size: 12px; padding: 3px 10px; border-radius: 99px; background: #2a2a25; }
+.estado-pagado .etiqueta { background: #1f4d2b; }
+.estado-reservado .etiqueta { background: #1f3d4d; }
+.estado-pendiente_transferencia .etiqueta, .estado-pendiente_pago .etiqueta { background: #5a4710; }
+.estado-cancelado { opacity: .55; }
+.contacto { color: var(--gris); font-size: 14px; }
+.acciones { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+button { background: var(--amarillo); color: #111; border: 0; border-radius: 8px; padding: 9px 14px; font-weight: 700; cursor: pointer; font-size: 14px; }
+button.secundario { background: transparent; color: var(--texto); border: 1px solid #4a4a42; }
+input, select { width: 100%; background: #0f0f0d; color: var(--texto); border: 1px solid #3a3a33; border-radius: 8px; padding: 9px 10px; font-size: 15px; margin-top: 4px; }
+label { display: block; font-size: 14px; color: var(--gris); }
+.formulario { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; align-items: end; margin-bottom: 12px; }
+.formulario .ancho { grid-column: 1 / -1; }
+.aviso { background: #1f4d2b; padding: 10px 14px; border-radius: 8px; }
+.error { color: #ff8a80; }
+.vacio, .ayuda { color: var(--gris); }
+.login { display: grid; place-items: center; min-height: 100vh; padding: 16px; }
+.login form { width: 100%; max-width: 340px; text-align: center; display: grid; gap: 14px; }
+.login img { margin: 0 auto; }

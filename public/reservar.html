@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reserva y pago | Domicfit</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0B0B0A">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="pagina-simple">
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a href="./" class="marca" aria-label="Volver al inicio">
+      <img src="assets/img/logo-domicfit-240.png" alt="" width="46" height="46"><span>DOMICFIT</span>
+    </a>
+    <a href="./#planes" class="boton boton--chico boton--borde">Seguir viendo planes</a>
+  </div>
+</header>
+
+<main>
+  <div class="contenedor">
+    <div class="seccion__cabeza" style="margin-bottom:28px">
+      <span class="antetitulo">Reserva</span>
+      <h2>Agenda tu <span class="pincel">primera sesión</span></h2>
+    </div>
+
+    <div data-vacio hidden class="paso">
+      <p>Tu carrito está vacío.</p>
+      <a href="./#planes" class="boton">Ver planes</a>
+    </div>
+
+    <form class="pasos" data-formulario novalidate hidden>
+      <div>
+        <section class="paso">
+          <h2><span class="n">1</span>Tus datos</h2>
+          <div class="campos">
+            <label class="campo ancho">Nombre y apellido <input name="nombre" autocomplete="name" required maxlength="100"></label>
+            <label class="campo">Correo <small>Aquí te llega la confirmación</small><input name="email" type="email" autocomplete="email" required maxlength="150"></label>
+            <label class="campo">WhatsApp <small>Para coordinar tus sesiones</small><input name="telefono" type="tel" autocomplete="tel" placeholder="+56 9 1234 5678" required maxlength="30"></label>
+            <label class="campo">¿Cuántas personas entrenan?
+              <select name="personas"><option value="1">1 persona</option><option value="2">2 personas (mismo valor)</option></select>
+            </label>
+            <label class="campo">Tu objetivo
+              <select name="objetivo">
+                <option>Bajar de peso</option>
+                <option>Ganar masa muscular</option>
+                <option>Mejorar condición física</option>
+                <option>Rendimiento en fútbol</option>
+                <option>Volver a entrenar después de una lesión</option>
+                <option>Otro</option>
+              </select>
+            </label>
+            <div class="ancho campos" data-solo-domicilio style="padding:0">
+              <label class="campo">Comuna
+                <select name="comuna" data-comunas><option value="">Elige tu comuna</option></select>
+              </label>
+              <label class="campo">Dirección <small>Calle, número y depto. o plaza cercana</small><input name="direccion" autocomplete="street-address" maxlength="200"></label>
+            </div>
+            <label class="campo ancho">Comentarios <small>(opcional) Lesiones, días que prefieres, etc.</small><textarea name="comentarios" maxlength="1000"></textarea></label>
+            <div class="oculto-trampa" aria-hidden="true"><label>No llenar <input name="website" tabindex="-1" autocomplete="off"></label></div>
+          </div>
+        </section>
+
+        <section class="paso">
+          <h2><span class="n">2</span>Día y hora</h2>
+          <p class="nota" data-texto-lugar style="margin-bottom:12px"></p>
+          <div class="dias" data-dias role="group" aria-label="Elige un día"></div>
+          <div data-horas aria-live="polite"><p class="estado-carga">Elige un día para ver las horas disponibles.</p></div>
+        </section>
+
+        <section class="paso" data-paso-pago>
+          <h2><span class="n">3</span>Pago</h2>
+          <div class="opciones">
+            <label class="opcion"><input type="radio" name="metodo" value="mercadopago" checked>
+              <span><b>Tarjeta de débito o crédito</b><small>Pago seguro con Mercado Pago.</small></span></label>
+            <label class="opcion" data-opcion-transferencia hidden><input type="radio" name="metodo" value="transferencia">
+              <span><b>Transferencia</b><small data-texto-transferencia>Te enviamos los datos por correo.</small></span></label>
+          </div>
+        </section>
+
+        <section class="paso">
+          <label class="check"><input type="checkbox" name="acepta" required>
+            <span>Leí y acepto las <a href="./#condiciones" target="_blank">condiciones del servicio</a>: el plan se paga completo antes de comenzar y los cambios de clase se avisan con al menos 12 horas de anticipación.</span></label>
+          <div data-error class="mensaje-error" role="alert" hidden style="margin-top:16px"></div>
+          <button type="submit" class="boton boton--bloque" style="margin-top:16px" data-enviar>Confirmar reserva</button>
+        </section>
+      </div>
+
+      <aside class="resumen" aria-label="Resumen">
+        <h2>Resumen</h2>
+        <div data-resumen-items></div>
+        <div class="resumen__item"><span>Lugar</span><span data-resumen-lugar>—</span></div>
+        <div class="resumen__item"><span>Primera sesión</span><span data-resumen-fecha>Por elegir</span></div>
+        <div class="total"><span>Total</span><b data-resumen-total>$0</b></div>
+        <p class="nota">Las siguientes sesiones de tu plan se coordinan contigo por WhatsApp.</p>
+      </aside>
+    </form>
+  </div>
+</main>
+
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+<script src="assets/js/comun.js"></script>
+<script src="assets/js/reservar.js"></script>
+</body>
+</html>

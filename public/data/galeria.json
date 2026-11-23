@@ -1,0 +1,4 @@
+{
+  "_nota": "Fotos de alumnos entrenando (con su autorización; en fotos de niños la cara va difuminada). Sube las fotos a assets/img/galeria/ y agrégalas aquí. Mientras la lista esté vacía, la sección no aparece. Ejemplo: { \"archivo\": \"assets/img/galeria/entrenamiento-1.jpg\", \"descripcion\": \"Entrenamiento funcional a domicilio\" }",
+  "fotos": []
+}

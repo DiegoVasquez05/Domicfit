@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domicfit | Entrenamiento personalizado a domicilio en Santiago</title>
+  <meta name="description" content="Entrenamiento personalizado y deportivo a domicilio en todas las comunas de Santiago o en nuestra sede de San Joaquín. Planes para 1 o 2 personas con evaluación mensual.">
+  <meta name="theme-color" content="#0B0B0A">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Domicfit | Entrenamiento personalizado y deportivo">
+  <meta property="og:description" content="Entrena en tu casa o en nuestra sede de San Joaquín, con evaluación mensual para que veas tu progreso real.">
+  <meta property="og:image" content="https://www.domicfit.cl/assets/img/logo-domicfit.png">
+  <meta property="og:url" content="https://www.domicfit.cl/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<!-- Íconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-casa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v11h14V9"/><path d="M10 20v-6h4v6"/></symbol>
+    <symbol id="i-sede" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9h2v6H2zM20 9h2v6h-2zM5 6h3v12H5zM16 6h3v12h-3zM8 12h8"/></symbol>
+    <symbol id="i-balon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m12 7 4 3-1.5 4.5h-5L8 10z"/><path d="M12 3v4M16 10l4.5-1.5M14.5 14.5 17 19M9.5 14.5 7 19M8 10 3.5 8.5"/></symbol>
+    <symbol id="i-kine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></symbol>
+    <symbol id="i-mano" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.4l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></symbol>
+    <symbol id="i-rayo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-manzana" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-1.5-1-5-1.5-6.5 1.5S5 17 8 20c1.5 1.5 2.5 1 4 .5 1.5.5 2.5 1 4-.5 3-3 4-8.5 2.5-11.5S13.5 6 12 7z"/><path d="M12 7c0-2 1-4 3-4"/></symbol>
+    <symbol id="i-maletin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+    <symbol id="i-fiesta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21 9 7l8 8z"/><path d="M14 4v2M19 9h2M17.5 5.5 16 7M20 3l-1 1M15 11c2-2 4-2 6-1"/></symbol>
+    <symbol id="i-regla" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 17 3l4 4L7 21z"/><path d="m7 13 2 2M10 10l2 2M13 7l2 2"/></symbol>
+    <symbol id="i-personas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-3.5 3-5.5 6.5-5.5s6 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.5 0 4 1.5 4.5 4"/></symbol>
+    <symbol id="i-carrito" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.5 12h12L22 7H6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-correo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  </defs>
+</svg>
+
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a href="#inicio" class="marca" aria-label="Domicfit, ir al inicio">
+      <img src="assets/img/logo-domicfit-240.png" alt="" width="46" height="46">
+      <span>DOMICFIT</span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#planes">Planes</a>
+      <a href="#evaluacion">Evaluación</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="cabecera__acciones">
+      <button class="boton-carrito" type="button" data-abrir-carrito aria-label="Abrir carrito">
+        <svg class="icono"><use href="#i-carrito"/></svg>
+        <span class="texto-carrito">Carrito</span>
+        <span class="contador" data-contador hidden>0</span>
+      </button>
+      <button class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil" data-boton-menu>
+        <svg class="icono"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="menu-movil" id="menu-movil" aria-label="Principal móvil">
+    <a href="#servicios">Servicios</a>
+    <a href="#planes">Planes y valores</a>
+    <a href="#evaluacion">Evaluación mensual</a>
+    <a href="#horarios">Dónde y horarios</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#preguntas">Preguntas frecuentes</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PORTADA ============ -->
+  <section class="portada" id="inicio">
+    <div class="contenedor">
+      <div class="portada__grid">
+        <div>
+          <span class="antetitulo">Santiago · A domicilio y en sede</span>
+          <h1>
+            <span class="linea">Entrenamiento</span>
+            <span class="linea"><span class="pincel">personalizado</span></span>
+            <span class="linea">y deportivo</span>
+          </h1>
+          <p class="portada__texto">Entrena en tu casa o en nuestra sede de San Joaquín, con <strong>evaluación mensual</strong> para que veas tu progreso real.</p>
+          <div class="portada__botones">
+            <a href="#planes" class="boton">Ver planes</a>
+            <a href="#prueba" class="boton boton--borde">Clase de prueba</a>
+          </div>
+        </div>
+        <div class="portada__logo">
+          <img src="assets/img/logo-domicfit.png" alt="Logo Domicfit" width="451" height="451">
+          <div class="portada__sello">1 o 2 personas<small>por el mismo valor</small></div>
+        </div>
+      </div>
+
+      <div class="ventajas">
+        <div class="ventaja"><svg class="icono"><use href="#i-casa"/></svg><div><strong>Vamos a tu casa</strong><span>En cualquier comuna de Santiago, con el mismo valor.</span></div></div>
+        <div class="ventaja"><svg class="icono"><use href="#i-sede"/></svg><div><strong>Llevamos todo</strong><span>El profesor lleva los implementos. No necesitas nada.</span></div></div>
+        <div class="ventaja"><svg class="icono"><use href="#i-regla"/></svg><div><strong>Evaluación mensual</strong><span>Ficha antropométrica y pruebas funcionales.</span></div></div>
+        <div class="ventaja"><svg class="icono"><use href="#i-personas"/></svg><div><strong>Entrena acompañado</strong><span>Todos los planes sirven para 1 o 2 personas.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cinta-envoltura" aria-hidden="true"><div class="cinta">
+    <div class="cinta__pista">
+      <span>Tu esfuerzo también se mide</span><span>Tu progreso también juega</span><span>Disciplina hoy, resultados mañana</span><span>Entrenamiento &amp; Recovery</span>
+      <span>Tu esfuerzo también se mide</span><span>Tu progreso también juega</span><span>Disciplina hoy, resultados mañana</span><span>Entrenamiento &amp; Recovery</span>
+    </div>
+  </div></div>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="seccion" id="servicios">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <span class="antetitulo">Servicios</span>
+        <h2>Todo para tu <span class="subrayado">salud y rendimiento</span></h2>
+        <p>Nuestro servicio principal es el entrenamiento personalizado a domicilio. Además tenemos sede en San Joaquín, kinesiología, masoterapia, recovery, nutrición y programas para futbolistas, empresas y eventos.</p>
+      </div>
+
+      <div class="grid-servicios">
+        <article class="servicio servicio--destacado">
+          <span class="etiqueta">El más pedido</span>
+          <div class="servicio__icono"><svg><use href="#i-casa"/></svg></div>
+          <h3>Entrenamiento a domicilio</h3>
+          <p>Un profesor llega a tu casa, edificio o plaza con todos los implementos. Entrenas con una planificación según tu objetivo y una evaluación mensual de tu progreso. Para 1 o 2 personas.</p>
+          <div class="servicio__precio">Clase suelta <b>$25.000</b> · planes desde <b>$23.000</b> por sesión</div>
+          <a href="#planes" class="boton boton--chico" data-ir-pestana="domicilio">Ver planes</a>
+        </article>
+        <article class="servicio">
+          <div class="servicio__icono"><svg><use href="#i-sede"/></svg></div>
+          <h3>Sede San Joaquín</h3>
+          <p>Entrena en nuestra sede de Pasaje Río Valdivia 3705B, con sala de máquinas y zona funcional. Personalizado, 2x1 y clases grupales: puedes venir solo o con otra persona por el mismo valor.</p>
+          <div class="servicio__precio">Clase de prueba <b>gratis</b> · planes desde <b>$6.000</b> por sesión</div>
+          <a href="#planes" class="boton boton--chico" data-ir-pestana="sede">Ver planes</a>
+        </article>
+        <article class="servicio">
+          <div class="servicio__icono"><svg><use href="#i-balon"/></svg></div>
+          <h3>Futbolistas</h3>
+          <p>Preparación física para jugadores y jugadoras: fuerza, velocidad, resistencia y prevención de lesiones, para rendir más en la cancha. A domicilio o en la sede.</p>
+          <a class="boton boton--chico boton--borde" data-whatsapp="Hola Domicfit, quiero información del programa para futbolistas.">Consultar por WhatsApp</a>
+        </article>
+        <article class="servicio">
+          <div class="servicio__icono"><svg><use href="#i-kine"/></svg></div>
+          <h3>Kinesiología</h3>
+          <p>Evaluación y tratamiento de lesiones musculares y articulares, con ejercicios para prevenirlas y volver a entrenar de forma segura.</p>
+          <a class="boton boton--chico boton--borde" data-whatsapp="Hola Domicfit, quiero información sobre kinesiología.">Consultar por WhatsApp</a>
+        </article>
+        <article class="servicio">
+          <div class="servicio__icono"><svg><use href="#i-mano"/></svg></div>
+          <h3>Masoterapia</h3>
+          <p>Masajes descontracturantes y deportivos para liberar tensiones, aliviar contracturas y recuperarte después del entrenamiento o la competencia.</p>
+          <a class="boton boton--chico boton--borde" data-whatsapp="Hola Domicfit, quiero información sobre masoterapia.">Consultar por WhatsApp</a>
+        </article>
+        <article class="servicio">
+          <div class="servicio__icono"><svg><use href="#i-rayo"/></svg></div>
+          <h3>Recovery</h3>
+          <p>Técnicas de recuperación, como la presoterapia, para disminuir la fatiga muscular y recuperarte más rápido entre entrenamientos.</p>
+          <a class="boton boton--chico boton--borde" data-whatsapp="Hola Domicfit, quiero información sobre recovery y presoterapia.">Consultar por WhatsApp</a>
+        </article>
+        <article class="servicio">
+          <div class="servicio__icono"><svg><use href="#i-manzana"/></svg></div>
+          <h3>Nutrición</h3>
+          <p>Orientación en alimentación según tu objetivo: bajar de peso, ganar masa muscular o rendir mejor en tu deporte.</p>
+          <a class="boton boton--chico boton--borde" data-whatsapp="Hola Domicfit, quiero información sobre nutrición.">Consultar por WhatsApp</a>
+        </article>
+        <article class="servicio">
+          <div class="servicio__icono"><svg><use href="#i-maletin"/></svg></div>
+          <h3>Empresas</h3>
+          <p>Pausas activas en el lugar de trabajo y un programa de bienestar para cuidar la salud de tu equipo. Cotización según empresa y cantidad de personas.</p>
+          <a class="boton boton--chico boton--borde" data-whatsapp="Hola Domicfit, quiero cotizar pausas activas / programa de bienestar para mi empresa.">Cotizar</a>
+        </article>
+        <article class="servicio">
+          <div class="servicio__icono"><svg><use href="#i-fiesta"/></svg></div>
+          <h3>Eventos</h3>
+          <p>Actividades deportivas para cumpleaños y eventos, adaptadas a la edad y al grupo. Cotización según tipo de evento y cantidad de personas.</p>
+          <a class="boton boton--chico boton--borde" data-whatsapp="Hola Domicfit, quiero cotizar una actividad deportiva para un evento.">Cotizar</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLANES ============ -->
+  <section class="seccion seccion--alt" id="planes">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <span class="antetitulo">Planes y valores</span>
+        <h2>Elige tu plan y <span class="pincel">agenda</span></h2>
+        <p>Todos los planes sirven para <strong>1 o 2 personas por el mismo valor</strong> y se pagan completos antes de comenzar. Al comprar eliges el día y la hora de tu primera sesión.</p>
+      </div>
+
+      <div class="prueba" id="prueba">
+        <div>
+          <h3>Clase de prueba</h3>
+          <p><strong>Gratis</strong> en la sede San Joaquín y <strong>$15.000</strong> a domicilio, para 1 o 2 personas.</p>
+        </div>
+        <div class="prueba__botones">
+          <button class="boton" type="button" data-prueba="prueba-sede">Reservar gratis en sede</button>
+          <button class="boton boton--borde" type="button" data-prueba="prueba-domicilio">A domicilio $15.000</button>
+        </div>
+      </div>
+
+      <div class="pestanas" role="tablist" aria-label="Modalidad">
+        <button class="pestana" role="tab" id="tab-domicilio" aria-controls="planes-lista" aria-selected="true" data-pestana="domicilio">A domicilio</button>
+        <button class="pestana" role="tab" id="tab-sede" aria-controls="planes-lista" aria-selected="false" data-pestana="sede">Sede San Joaquín</button>
+      </div>
+      <p class="planes__nota" data-nota-planes>Mismo valor en todas las comunas de Santiago. El profesor lleva los implementos.</p>
+      <div class="grid-planes" id="planes-lista" role="tabpanel" aria-live="polite">
+        <p class="nota">Cargando planes…</p>
+      </div>
+      <div class="suelta" data-suelta>
+        <span>¿Solo quieres una clase? <strong>Clase suelta a domicilio</strong> <b>$25.000</b></span>
+        <button type="button" class="boton boton--chico boton--borde" data-agregar="dom-1">Agregar clase suelta</button>
+      </div>
+
+      <div class="incluye">
+        <div>
+          <h3>Todos los planes incluyen</h3>
+          <ul>
+            <li>Evaluación corporal</li>
+            <li>Evaluación funcional</li>
+            <li>Planificación según tu objetivo</li>
+            <li>Sesiones de 60 minutos</li>
+            <li>Tips de alimentación</li>
+            <li>Asesoría de coach</li>
+          </ul>
+        </div>
+        <p class="nota">Formas de pago: tarjeta de débito, tarjeta de crédito (Mercado Pago) o transferencia. Al pagar recibes por correo el detalle del servicio con sus condiciones. La duración en meses depende de cuántas veces por semana entrenes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EVALUACIÓN ============ -->
+  <section class="seccion" id="evaluacion">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <span class="antetitulo">Evaluación mensual</span>
+        <h2>Tu esfuerzo <span class="pincel">también se mide</span></h2>
+        <p>Cada mes te evaluamos y te entregamos tu ficha antropométrica para que veas tu progreso real.</p>
+      </div>
+      <div class="grid-evaluacion">
+        <div class="bloque">
+          <div class="numero">01</div>
+          <h3>Medidas corporales</h3>
+          <p>Peso, talla y perímetros de brazo relajado y contraído, cintura, muslo y pantorrilla.</p>
+        </div>
+        <div class="bloque">
+          <div class="numero">02</div>
+          <h3>Composición corporal</h3>
+          <p>4 pliegues cutáneos (bicipital, tricipital, subescapular y supraíliaco) para calcular % de grasa, kilos de grasa y masa magra.</p>
+        </div>
+        <div class="bloque">
+          <div class="numero">03</div>
+          <h3>Pruebas funcionales</h3>
+          <p>Con puntaje de 1 a 3: sentadilla profunda, estocada en línea, fuerza de zona media, movilidad de hombro, flexibilidad dinámica y alcance anterior.</p>
+        </div>
+        <div class="bloque">
+          <div class="numero">04</div>
+          <h3>Ficha antropométrica</h3>
+          <p>Te la entregamos cada mes en imagen, con tu clasificación y recomendaciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HORARIOS ============ -->
+  <section class="seccion seccion--alt" id="horarios">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <span class="antetitulo">Dónde atendemos</span>
+        <h2>En tu casa o <span class="subrayado">en la sede</span></h2>
+        <p>Las sesiones duran 60 minutos en ambas modalidades.</p>
+      </div>
+      <div class="grid-lugares">
+        <article class="lugar">
+          <h3>A domicilio</h3>
+          <dl>
+            <div><dt>Cobertura</dt><dd>Todas las comunas de Santiago, con el mismo valor. Vamos a tu casa, edificio o a una plaza cercana.</dd></div>
+            <div><dt>Implementos</dt><dd>Los lleva el profesor. No necesitas tener nada en casa.</dd></div>
+            <div><dt>Horarios</dt><dd>Lunes a viernes de 6:30 a 21:00<br>Sábado de 7:00 a 13:00<br><small>Inicio cada 30 minutos.</small></dd></div>
+          </dl>
+          <a href="#planes" class="boton boton--chico" data-ir-pestana="domicilio">Agendar a domicilio</a>
+        </article>
+        <article class="lugar">
+          <h3>Sede San Joaquín</h3>
+          <dl>
+            <div><dt>Dirección</dt><dd>Pasaje Río Valdivia 3705B, San Joaquín, Santiago.<br><a href="https://www.google.com/maps/search/?api=1&query=Pasaje+R%C3%ADo+Valdivia+3705B%2C+San+Joaqu%C3%ADn%2C+Santiago" target="_blank" rel="noopener">Ver en el mapa</a></dd></div>
+            <div><dt>Instalaciones</dt><dd>Sala de máquinas y zona funcional. Personalizado, 2x1 y clases grupales.</dd></div>
+            <div><dt>Horarios (lunes a viernes)</dt><dd>
+              <div class="horas"><span>10:00</span><span>11:00</span><span>20:00</span><span>21:00</span><span>22:00</span></div>
+            </dd></div>
+          </dl>
+          <a href="#planes" class="boton boton--chico" data-ir-pestana="sede">Agendar en sede</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOSOTROS ============ -->
+  <section class="seccion" id="nosotros">
+    <div class="contenedor nosotros">
+      <div>
+        <span class="antetitulo">Quiénes somos</span>
+        <h2>Disciplina hoy, <span class="pincel">resultados</span> mañana</h2>
+        <p>Domicfit es una empresa de servicios de salud y entrenamiento de Santiago. Llevamos más de 7 años entregando un entrenamiento de calidad en los domicilios, con profesores certificados que te ayudarán a lograr tus objetivos de la manera que más te acomode.</p>
+      </div>
+      <div class="cifras">
+        <div class="cifra"><b>+7</b><span>años entrenando</span></div>
+        <div class="cifra"><b>60'</b><span>por sesión</span></div>
+        <div class="cifra"><b>1-2</b><span>personas por plan</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EQUIPO ============ -->
+  <section class="seccion seccion--alt" id="equipo">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <span class="antetitulo">Equipo</span>
+        <h2>Tus <span class="subrayado">profesores</span></h2>
+      </div>
+      <div class="grid-equipo" data-equipo></div>
+    </div>
+  </section>
+
+  <!-- Galería: aparece sola cuando se agregan fotos en data/galeria.json -->
+  <section class="seccion" id="galeria" hidden>
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <span class="antetitulo">Nuestros alumnos</span>
+        <h2>Así <span class="pincel">entrenamos</span></h2>
+      </div>
+      <div class="galeria" data-galeria></div>
+    </div>
+  </section>
+
+  <!-- Testimonios: aparece solo cuando hay opiniones en data/testimonios.json -->
+  <section class="seccion seccion--alt" id="testimonios" hidden>
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <span class="antetitulo">Opiniones</span>
+        <h2>Lo que dicen <span class="subrayado">nuestros alumnos</span></h2>
+      </div>
+      <div class="grid-testimonios" data-testimonios></div>
+    </div>
+  </section>
+
+  <!-- ============ PREGUNTAS ============ -->
+  <section class="seccion" id="preguntas">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <span class="antetitulo">Preguntas frecuentes</span>
+        <h2>¿Tienes <span class="pincel">dudas?</span></h2>
+      </div>
+      <div class="faq">
+        <details><summary>¿Cuánto cuesta la clase de prueba?</summary><div><p>Es gratis en la sede San Joaquín y cuesta $15.000 a domicilio, para 1 o 2 personas.</p></div></details>
+        <details><summary>¿A qué comunas van a domicilio?</summary><div><p>A todas las comunas de Santiago, con el mismo valor.</p></div></details>
+        <details><summary>¿Cuánto dura cada sesión?</summary><div><p>60 minutos.</p></div></details>
+        <details><summary>¿Puedo entrenar con otra persona?</summary><div><p>Sí. Todos los planes sirven para 1 o 2 personas, por el mismo valor.</p></div></details>
+        <details><summary>¿Qué incluyen los planes?</summary><div><p>Evaluación corporal y funcional, planificación según tu objetivo, sesiones de 60 minutos, tips de alimentación y asesoría de coach.</p></div></details>
+        <details><summary>¿Cómo puedo pagar?</summary><div><p>Con tarjeta de débito o crédito a través de Mercado Pago, o por transferencia.</p></div></details>
+        <details><summary>¿Necesito implementos en casa?</summary><div><p>No. Cada profesor lleva los implementos necesarios.</p></div></details>
+        <details><summary>¿Cómo veo mi progreso?</summary><div><p>Te evaluamos cada mes y te enviamos tu ficha antropométrica.</p></div></details>
+        <details><summary>¿Cómo agendo las sesiones de mi plan?</summary><div><p>Al comprar eliges el día y la hora de tu primera sesión. Las siguientes las coordinamos contigo por WhatsApp según cuántas veces por semana quieras entrenar.</p></div></details>
+      </div>
+
+      <div class="condiciones" id="condiciones">
+        <h3>Condiciones del servicio</h3>
+        <div class="faq" style="margin-top:16px">
+          <details open><summary>Ver condiciones</summary><div><ul>
+            <li><strong>Pago:</strong> el plan se paga completo antes de comenzar.</li>
+            <li><strong>Suspender o cambiar una clase:</strong> se puede avisando con al menos 12 horas de anticipación, una vez por semana como máximo. Con menos aviso, la clase se cuenta como realizada. La recuperación depende del horario disponible del profesor.</li>
+            <li><strong>Clases perdidas:</strong> las clases que no se realizan por motivos del alumno no se recuperan ni se traspasan a otra persona o a otro periodo.</li>
+            <li><strong>Congelar el plan:</strong> se puede por enfermedad o vacaciones, informándolo por correo con el comprobante de la ausencia.</li>
+          </ul></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="seccion seccion--alt" id="contacto">
+    <div class="contenedor contacto">
+      <div>
+        <span class="antetitulo">Contacto</span>
+        <h2>Empieza <span class="pincel">hoy</span></h2>
+        <p style="color:var(--gris);font-size:18px">Escríbenos por WhatsApp para reservas, consultas y confirmaciones. Te respondemos a la brevedad.</p>
+        <div class="redes" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/domicfit/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@domicfit" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.facebook.com/domicfit" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.youtube.com/@domicfit" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+      <div class="contacto__datos">
+        <a class="dato" data-whatsapp="Hola Domicfit, quiero más información."><svg class="icono"><use href="#i-whatsapp"/></svg><div><small>WhatsApp</small>+56 9 8655 8409</div></a>
+        <a class="dato" href="mailto:domicfit@gmail.com"><svg class="icono"><use href="#i-correo"/></svg><div><small>Correo</small>domicfit@gmail.com</div></a>
+        <a class="dato" href="https://www.google.com/maps/search/?api=1&query=Pasaje+R%C3%ADo+Valdivia+3705B%2C+San+Joaqu%C3%ADn%2C+Santiago" target="_blank" rel="noopener"><svg class="icono"><use href="#i-pin"/></svg><div><small>Sede</small>Pasaje Río Valdivia 3705B, San Joaquín</div></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__fila">
+    <img src="assets/img/logo-domicfit-240.png" alt="Domicfit" width="56" height="56">
+    <span>© <span data-anio></span> Domicfit · Entrenamiento personalizado y deportivo · Santiago, Chile</span>
+    <a href="#condiciones">Condiciones del servicio</a>
+  </div>
+</footer>
+
+<a class="whatsapp-flotante" data-whatsapp="Hola Domicfit, quiero más información." aria-label="Escríbenos por WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
+
+<!-- ============ CARRITO ============ -->
+<div class="velo" data-velo></div>
+<aside class="carrito" aria-label="Carrito" aria-hidden="true" data-carrito>
+  <div class="carrito__cabeza">
+    <h2>Tu carrito</h2>
+    <button class="cerrar" type="button" data-cerrar-carrito aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="carrito__lista" data-carrito-lista></div>
+  <div class="carrito__pie">
+    <div class="total"><span>Total</span><b data-carrito-total>$0</b></div>
+    <p class="nota">En el siguiente paso eliges el día y la hora de tu primera sesión.</p>
+    <a href="reservar.html" class="boton boton--bloque" data-ir-reservar>Continuar con la reserva</a>
+  </div>
+</aside>
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+<script src="assets/js/comun.js"></script>
+<script src="assets/js/inicio.js"></script>
+</body>
+</html>

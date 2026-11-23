@@ -1,0 +1,21 @@
+{
+  "_nota": "Precios en pesos chilenos (CLP). Este archivo lo leen la página y el servidor: si cambias un precio aquí, cambia en todas partes. 'mejor_valor' marca el plan destacado.",
+  "productos": [
+    { "id": "prueba-domicilio", "modalidad": "domicilio", "tipo": "prueba", "nombre": "Clase de prueba a domicilio", "sesiones": 1, "precio": 15000 },
+    { "id": "prueba-sede", "modalidad": "sede", "tipo": "prueba", "nombre": "Clase de prueba en sede San Joaquín", "sesiones": 1, "precio": 0 },
+
+    { "id": "dom-1", "modalidad": "domicilio", "tipo": "plan", "nombre": "Clase suelta a domicilio", "sesiones": 1, "precio": 25000 },
+    { "id": "dom-8", "modalidad": "domicilio", "tipo": "plan", "nombre": "Plan 8 sesiones a domicilio", "sesiones": 8, "precio": 200000 },
+    { "id": "dom-12", "modalidad": "domicilio", "tipo": "plan", "nombre": "Plan 12 sesiones a domicilio", "sesiones": 12, "precio": 300000 },
+    { "id": "dom-24", "modalidad": "domicilio", "tipo": "plan", "nombre": "Plan 24 sesiones a domicilio", "sesiones": 24, "precio": 588000 },
+    { "id": "dom-36", "modalidad": "domicilio", "tipo": "plan", "nombre": "Plan 36 sesiones a domicilio", "sesiones": 36, "precio": 864000 },
+    { "id": "dom-48", "modalidad": "domicilio", "tipo": "plan", "nombre": "Plan 48 sesiones a domicilio", "sesiones": 48, "precio": 1128000 },
+    { "id": "dom-56", "modalidad": "domicilio", "tipo": "plan", "nombre": "Plan 56 sesiones a domicilio", "sesiones": 56, "precio": 1288000, "mejor_valor": true },
+
+    { "id": "sede-4", "modalidad": "sede", "tipo": "plan", "nombre": "Plan 4 sesiones en sede", "sesiones": 4, "precio": 40000 },
+    { "id": "sede-8", "modalidad": "sede", "tipo": "plan", "nombre": "Plan 8 sesiones en sede", "sesiones": 8, "precio": 70000 },
+    { "id": "sede-12", "modalidad": "sede", "tipo": "plan", "nombre": "Plan 12 sesiones en sede", "sesiones": 12, "precio": 85000 },
+    { "id": "sede-24", "modalidad": "sede", "tipo": "plan", "nombre": "Plan 24 sesiones en sede", "sesiones": 24, "precio": 156000 },
+    { "id": "sede-36", "modalidad": "sede", "tipo": "plan", "nombre": "Plan 36 sesiones en sede", "sesiones": 36, "precio": 216000, "mejor_valor": true }
+  ]
+}

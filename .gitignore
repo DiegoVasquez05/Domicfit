@@ -1,0 +1,19 @@
+# Claves y configuración real: NUNCA subir
+public/config/config.php
+.env
+*.env
+
+# Base de datos con reservas y datos de clientes
+public/privado/*
+!public/privado/.htaccess
+!public/privado/.gitkeep
+*.sqlite
+*.sqlite-journal
+
+# Sistema
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/
+*.log

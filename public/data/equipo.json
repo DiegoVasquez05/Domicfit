@@ -1,0 +1,13 @@
+{
+  "_nota": "Para agregar un profesor, copia un bloque { ... } y cambia los datos. La foto va en assets/img/equipo/ (cuadrada, ojalá 600x600). Si 'foto' está vacío se muestra el logo.",
+  "equipo": [
+    {
+      "nombre": "Fabián Vásquez",
+      "cargo": "Preparador físico y fundador",
+      "foto": "",
+      "modalidades": ["A domicilio", "Sede San Joaquín"],
+      "descripcion": "Técnico en Preparación Física y Health Coach. Fundó Domicfit para llevar el entrenamiento personalizado a la puerta de tu casa.",
+      "formacion": []
+    }
+  ]
+}
