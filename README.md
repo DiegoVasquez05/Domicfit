@@ -56,6 +56,18 @@ Requisitos: PHP 8.1 o superior con `pdo_sqlite` y `curl` (vienen activados en ca
 
 **`config.php` nunca se sube a GitHub**: tiene las claves. Está en `.gitignore`.
 
+## Publicación automática
+
+Cada cambio que entra a la rama `main` se sube solo al hosting con GitHub Actions (`.github/workflows/publicar.yml`). Para activarlo, en GitHub ve a **Settings → Secrets and variables → Actions** y crea:
+
+| Secret | Qué va |
+|---|---|
+| `FTP_SERVIDOR` | El servidor FTP, por ejemplo `ftp.domicfit.cl` |
+| `FTP_USUARIO` | Usuario FTP de cPanel |
+| `FTP_CLAVE` | Contraseña de ese usuario |
+
+Si la carpeta de destino no es `public_html/`, crea también la variable `FTP_CARPETA`. Mientras no existan los secrets, la publicación se salta sin error. `config/config.php` y la base de datos nunca se suben ni se borran.
+
 ## Cómo funciona el pago
 
 1. El alumno elige el plan, el día y la hora. El horario queda guardado 30 minutos mientras paga (24 horas si es transferencia).

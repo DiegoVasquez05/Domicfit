@@ -1,0 +1,55 @@
+# Sube la página a CpanelHost cada vez que hay cambios en la rama main.
+#
+# Necesita estos "secrets" en GitHub (Settings > Secrets and variables > Actions):
+#   FTP_SERVIDOR    ej: ftp.domicfit.cl
+#   FTP_USUARIO     usuario FTP de cPanel
+#   FTP_CLAVE       contraseña de ese usuario
+# Y opcionalmente esta "variable" (pestaña Variables):
+#   FTP_CARPETA     carpeta de destino en el servidor. Por defecto: public_html/
+#
+# Nunca se suben ni se borran config/config.php ni la base de datos (privado/).
+name: Publicar en domicfit.cl
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Revisar que los datos de FTP estén configurados
+        id: revisar
+        env:
+          FTP_SERVIDOR: ${{ secrets.FTP_SERVIDOR }}
+        run: |
+          if [ -z "$FTP_SERVIDOR" ]; then
+            echo "Faltan los secrets de FTP: no se publica todavía." >> "$GITHUB_STEP_SUMMARY"
+            echo "listo=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "listo=si" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.revisar.outputs.listo == 'si'
+
+      - name: Subir archivos por FTP
+        if: steps.revisar.outputs.listo == 'si'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVIDOR }}
+          username: ${{ secrets.FTP_USUARIO }}
+          password: ${{ secrets.FTP_CLAVE }}
+          protocol: ftps
+          local-dir: ./public/
+          server-dir: ${{ vars.FTP_CARPETA || 'public_html/' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            config/config.php
+            privado/**
