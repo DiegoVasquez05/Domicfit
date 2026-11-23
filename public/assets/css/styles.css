@@ -260,7 +260,7 @@ a.dato:hover { border-color: var(--amarillo); }
 .linea-carrito__nombre { font-weight: 700; }
 .linea-carrito__detalle { color: var(--gris); font-size: 14px; }
 .linea-carrito__precio { font-weight: 700; text-align: right; }
-.cantidad { display: inline-flex; align-items: center; border: 1px solid var(--borde); border-radius: 8px; overflow: hidden; }
+.cantidad { justify-self: start; display: inline-flex; align-items: center; border: 1px solid var(--borde); border-radius: 8px; overflow: hidden; }
 .cantidad button { width: 34px; height: 32px; border: 0; background: var(--tarjeta-2); color: var(--texto); cursor: pointer; font-size: 18px; }
 .cantidad span { min-width: 34px; text-align: center; font-weight: 700; }
 .quitar { background: none; border: 0; color: var(--gris); text-decoration: underline; cursor: pointer; font-size: 14px; justify-self: end; }

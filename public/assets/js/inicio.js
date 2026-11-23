@@ -28,7 +28,7 @@
           <div class="plan__precio">${pesos(p.precio)}</div>
           <div class="plan__por">${pesos(porSesion)} por sesión</div>
           <button type="button" class="boton boton--chico boton--bloque${enCarrito.has(p.id) ? " agregado" : ""}" data-agregar="${esc(p.id)}">
-            ${enCarrito.has(p.id) ? "En el carrito ✓" : "Agregar"}
+            ${enCarrito.has(p.id) ? "En carrito ✓" : "Agregar"}
           </button>
         </article>`;
     }).join("");
