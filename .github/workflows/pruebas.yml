@@ -1,0 +1,48 @@
+# Revisa automáticamente cada cambio: que el código no tenga errores,
+# que la agenda, los pedidos, los pagos y el panel funcionen, y que la vista previa
+# funcione en un navegador real (computador y celular).
+name: Pruebas
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  servidor:
+    name: Agenda, pagos y panel (PHP)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1" # la versión mínima que debe tener el hosting
+          extensions: pdo_sqlite, curl, mbstring
+          coverage: none
+      - name: Revisar sintaxis de PHP
+        run: find public tests -name "*.php" -print0 | xargs -0 -n1 php -l
+      - name: Revisar archivos de datos (JSON)
+        run: for f in public/data/*.json; do python3 -m json.tool "$f" > /dev/null || exit 1; done
+      - name: Revisar sintaxis de JavaScript
+        run: for f in public/assets/js/*.js tests/*.js; do node --check "$f"; done
+      - name: Pruebas de la agenda, pedidos, Mercado Pago y panel
+        run: ./tests/ejecutar.sh
+
+  navegador:
+    name: Vista previa en el navegador
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Instalar Playwright
+        run: |
+          npm install --no-save --no-package-lock playwright@1.63.0
+          npx playwright install --with-deps chromium
+      - name: Armar y servir la vista previa
+        run: |
+          ./scripts/construir-vista-previa.sh _site
+          (cd _site && python3 -m http.server 8095 > /dev/null 2>&1 &)
+          sleep 1
+      - name: Probar en computador y celular
+        run: BASE_URL=http://localhost:8095/ node tests/vista-previa.e2e.js

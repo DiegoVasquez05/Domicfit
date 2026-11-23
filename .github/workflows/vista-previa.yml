@@ -1,0 +1,42 @@
+# Publica la vista previa (modo demostración, sin cobros) en GitHub Pages
+# cada vez que hay cambios en main.
+#
+# Para activarlo una sola vez: Settings > Pages > Build and deployment > Source: "GitHub Actions".
+# GitHub Pages gratis requiere que el repositorio sea público.
+name: Vista previa
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: vista-previa
+  cancel-in-progress: true
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Armar la vista previa
+        run: ./scripts/construir-vista-previa.sh _site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  publicar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publicar.outputs.page_url }}
+    steps:
+      - name: Publicar en GitHub Pages
+        id: publicar
+        uses: actions/deploy-pages@v4

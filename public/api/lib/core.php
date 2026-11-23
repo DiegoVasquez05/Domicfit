@@ -11,7 +11,8 @@ function config(): array
 {
     static $config = null;
     if ($config === null) {
-        $ruta = __DIR__ . '/../../config/config.php';
+        // DOMICFIT_CONFIG solo se usa en las pruebas automáticas; en el hosting se lee config/config.php.
+        $ruta = getenv('DOMICFIT_CONFIG') ?: __DIR__ . '/../../config/config.php';
         if (!is_file($ruta)) {
             error_log('Domicfit: falta config/config.php');
             responder_error('La página aún no está configurada.', 500);
@@ -63,6 +64,9 @@ function db(): PDO
             motivo TEXT
         )');
         $pdo->exec('CREATE INDEX IF NOT EXISTS idx_pedidos_inicio ON pedidos (modalidad, inicio)');
+        // Las reservas que nunca se pagaron se borran a los 6 meses (lo promete la política de privacidad).
+        $pdo->prepare("DELETE FROM pedidos WHERE estado IN ('cancelado', 'pendiente_pago', 'pendiente_transferencia') AND creado < ?")
+            ->execute([(new DateTimeImmutable('-6 months'))->format('Y-m-d H:i')]);
     }
     return $pdo;
 }

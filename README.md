@@ -15,6 +15,25 @@ Hecha con HTML, CSS y JavaScript, más PHP y SQLite para la agenda y los pagos. 
 
 ---
 
+## Vista previa en línea
+
+Cada cambio en `main` publica una **vista previa** en GitHub Pages (`.github/workflows/vista-previa.yml`): la misma página, pero en modo demostración. El carrito, la agenda y el pago se simulan en el navegador (`public/assets/js/demo.js`); no se cobra nada ni se guardan reservas. Un aviso amarillo arriba lo indica.
+
+Para activarla una sola vez: el repositorio debe ser público y en **Settings → Pages → Source** hay que elegir **GitHub Actions**.
+
+Para armarla en el computador: `./scripts/construir-vista-previa.sh` (queda en `_site/`).
+
+## Pruebas automáticas
+
+En cada cambio, GitHub ejecuta `.github/workflows/pruebas.yml`:
+
+- **Servidor (PHP 8.1):** sintaxis, archivos de datos y 32 pruebas de la agenda, pedidos, Mercado Pago (con una imitación de su API) y el panel. Se ejecutan con `./tests/ejecutar.sh`.
+- **Navegador:** compra, clase de prueba y validaciones en la vista previa, en computador y celular (`tests/vista-previa.e2e.js`, con Playwright).
+
+## Páginas legales
+
+`public/terminos.html` y `public/privacidad.html`. Tienen datos marcados **"por completar"** o **"por definir"** (RUT de la empresa, plazo para usar las sesiones y política de retracto y devoluciones) que debe completar Domicfit. Conviene que un abogado las revise antes de publicar.
+
 ## Cómo actualizar el contenido
 
 | Quiero cambiar… | Archivo |
@@ -33,12 +52,16 @@ public/                 → todo esto se sube a public_html
 ├── index.html          → página principal
 ├── reservar.html       → datos, día y hora, y pago
 ├── pago.html           → resultado de la reserva o del pago
+├── terminos.html       → términos y condiciones
+├── privacidad.html     → política de privacidad
 ├── admin/              → panel de administración (con contraseña)
 ├── api/                → agenda, pedidos y Mercado Pago (PHP)
 ├── assets/             → estilos, scripts e imágenes
 ├── data/               → precios, equipo, testimonios y galería
 ├── config/             → config.example.php (config.php va solo en el servidor)
 └── privado/            → base de datos (se crea sola, protegida)
+scripts/                → arma la vista previa
+tests/                  → pruebas automáticas
 ```
 
 ## Instalación en el hosting (cPanel)
