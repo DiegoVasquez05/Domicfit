@@ -241,6 +241,10 @@ a.dato:hover { border-color: var(--amarillo); }
 .redes a { padding: 8px 14px; border-radius: 99px; border: 1px solid #3d3d35; color: var(--texto); text-decoration: none; font-weight: 600; font-size: 15px; }
 .redes a:hover { border-color: var(--amarillo); color: var(--amarillo); }
 @media (min-width: 900px) { .contacto { grid-template-columns: 1fr 1fr; } }
+.resena { margin-top: 28px; padding: 20px; border: 1px solid var(--borde); border-radius: var(--radio); background: var(--fondo); }
+.resena__estrellas { color: var(--amarillo); font-size: 22px; letter-spacing: 3px; }
+.resena p { margin: 6px 0 14px; color: var(--gris); }
+.resena p strong { color: var(--texto); }
 
 /* ============ Pie ============ */
 .pie { padding: 40px 0 100px; border-top: 1px solid var(--borde); color: var(--gris); font-size: 15px; }
