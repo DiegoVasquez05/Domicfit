@@ -205,6 +205,7 @@ h3 { font-size: 26px; }
 /* ============ Galería y testimonios ============ */
 .galeria { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 .galeria img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; }
+@media (max-width: 520px) { .galeria { grid-template-columns: 1fr 1fr; gap: 8px; } .galeria img { border-radius: 10px; } }
 .grid-testimonios { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 .testimonio { margin: 0; padding: 24px; background: var(--fondo); border: 1px solid var(--borde); border-radius: var(--radio); }
 .testimonio blockquote { margin: 0 0 14px; font-size: 17px; }

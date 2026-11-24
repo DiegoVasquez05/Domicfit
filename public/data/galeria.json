@@ -1,4 +1,9 @@
 {
-  "_nota": "Fotos de alumnos entrenando (con su autorización; en fotos de niños la cara va difuminada). Sube las fotos a assets/img/galeria/ y agrégalas aquí. Mientras la lista esté vacía, la sección no aparece. Ejemplo: { \"archivo\": \"assets/img/galeria/entrenamiento-1.jpg\", \"descripcion\": \"Entrenamiento funcional a domicilio\" }",
-  "fotos": []
+  "_nota": "Fotos de alumnos entrenando (con su autorización; en fotos de niños la cara va difuminada). Sube las fotos a assets/img/galeria/ y agrégalas aquí. Mientras la lista esté vacía, la sección no aparece.",
+  "fotos": [
+    { "archivo": "assets/img/galeria/sede-maquinas-alumno.jpg", "descripcion": "Alumno entrenando en la sala de máquinas de la sede San Joaquín" },
+    { "archivo": "assets/img/galeria/sede-maquinas-alumna.jpg", "descripcion": "Alumna entrenando en la sala de máquinas de la sede San Joaquín" },
+    { "archivo": "assets/img/galeria/sede-zona-funcional-core.jpg", "descripcion": "Ejercicio de core con balón en la zona funcional de la sede" },
+    { "archivo": "assets/img/galeria/sede-zona-funcional.jpg", "descripcion": "Zona funcional de la sede San Joaquín" }
+  ]
 }
