@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /reservar.html
+Disallow: /pago.html
+
+Sitemap: https://www.domicfit.cl/sitemap.xml

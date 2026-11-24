@@ -18,5 +18,12 @@ for pagina in "$destino"/*.html; do
   # La vista previa no debe aparecer en Google.
   sed -i 's|<meta charset="utf-8">|<meta charset="utf-8">\n  <meta name="robots" content="noindex">|' "$pagina"
 done
+# Al compartir el link de la vista previa, la imagen y la dirección deben ser las de la vista previa.
+url_vista="${VISTA_PREVIA_URL:-https://diegovasquez05.github.io/Domicfit/}"
+sed -i "s|https://www.domicfit.cl/assets/img/compartir.jpg|${url_vista}assets/img/compartir.jpg|; s|<meta property=\"og:url\" content=\"https://www.domicfit.cl/\">|<meta property=\"og:url\" content=\"${url_vista}\">|" "$destino/index.html"
+
+# Que Google no indexe la vista previa (la página real es www.domicfit.cl).
+printf 'User-agent: *\nDisallow: /\n' > "$destino/robots.txt"
+rm -f "$destino/sitemap.xml"
 touch "$destino/.nojekyll"
 echo "Vista previa lista en $destino"

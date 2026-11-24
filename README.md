@@ -23,6 +23,13 @@ Para activarla una sola vez: el repositorio debe ser público y en **Settings �
 
 Para armarla en el computador: `./scripts/construir-vista-previa.sh` (queda en `_site/`).
 
+## Google y redes sociales
+
+- **Al compartir el link** (WhatsApp, Instagram, Facebook) se muestra `public/assets/img/compartir.jpg` con título y descripción (etiquetas `og:` en `index.html`).
+- **Datos del negocio para Google** (bloque `application/ld+json` en `index.html`): dirección, teléfono, horario, redes y algunos precios. Si cambian, actualízalos ahí también.
+- `public/robots.txt` y `public/sitemap.xml` indican a Google qué páginas mostrar (no muestra el panel, la API ni las páginas de reserva y pago).
+- La vista previa no se indexa: su `robots.txt` y las etiquetas `noindex` lo impiden.
+
 ## Pruebas automáticas
 
 En cada cambio, GitHub ejecuta `.github/workflows/pruebas.yml`:
