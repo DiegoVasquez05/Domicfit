@@ -4,8 +4,11 @@
     {
       "nombre": "Fabián Vásquez",
       "cargo": "Preparador físico y fundador",
-      "foto": "",
-      "modalidades": ["A domicilio", "Sede San Joaquín"],
+      "foto": "assets/img/equipo/fabian-vasquez.jpg",
+      "modalidades": [
+        "A domicilio",
+        "Sede San Joaquín"
+      ],
       "descripcion": "Técnico en Preparación Física y Health Coach. Fundó Domicfit para llevar el entrenamiento personalizado a la puerta de tu casa.",
       "formacion": []
     }
