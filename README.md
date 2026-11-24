@@ -34,7 +34,7 @@ Para armarla en el computador: `./scripts/construir-vista-previa.sh` (queda en `
 
 En cada cambio, GitHub ejecuta `.github/workflows/pruebas.yml`:
 
-- **Servidor (PHP 8.1):** sintaxis, archivos de datos y 32 pruebas de la agenda, pedidos, Mercado Pago (con una imitación de su API) y el panel. Se ejecutan con `./tests/ejecutar.sh`.
+- **Servidor (PHP 8.1):** sintaxis, archivos de datos y 33 pruebas de la agenda, pedidos, Mercado Pago (con una imitación de su API) y el panel. Se ejecutan con `./tests/ejecutar.sh`.
 - **Navegador:** compra, clase de prueba y validaciones en la vista previa, en computador y celular (`tests/vista-previa.e2e.js`, con Playwright).
 
 ## Páginas legales

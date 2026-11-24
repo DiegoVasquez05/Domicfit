@@ -162,7 +162,7 @@
     $("[data-solo-domicilio]").hidden = pedido.modalidad !== "domicilio";
     $("[data-texto-lugar]").textContent = pedido.modalidad === "sede"
       ? "Sede San Joaquín: lunes a viernes a las 10:00, 11:00, 20:00, 21:00 y 22:00."
-      : "A domicilio: lunes a viernes de 6:30 a 21:00 y sábado de 7:00 a 13:00.";
+      : "A domicilio: lunes a viernes de 6:30 a 21:00 y sábado de 7:00 a 12:00 (la última clase empieza una hora antes).";
     if (pedido.total === 0) $("[data-paso-pago]").hidden = true;
     $("[data-enviar]").textContent = textoBoton();
     pintarResumen();

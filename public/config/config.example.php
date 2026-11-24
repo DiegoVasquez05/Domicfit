@@ -64,13 +64,14 @@ return [
             'capacidad' => 1,
             'margen' => 30, // tiempo de traslado entre una casa y otra
             // rangos: [primera hora de inicio, última hora de inicio, cada cuántos minutos]
+            // La última clase empieza una hora antes del cierre (lunes a viernes cierra 21:00, sábado 12:00).
             'rangos' => [
-                1 => ['06:30', '21:00', 30],
-                2 => ['06:30', '21:00', 30],
-                3 => ['06:30', '21:00', 30],
-                4 => ['06:30', '21:00', 30],
-                5 => ['06:30', '21:00', 30],
-                6 => ['07:00', '13:00', 30],
+                1 => ['06:30', '20:00', 30],
+                2 => ['06:30', '20:00', 30],
+                3 => ['06:30', '20:00', 30],
+                4 => ['06:30', '20:00', 30],
+                5 => ['06:30', '20:00', 30],
+                6 => ['07:00', '11:00', 30],
             ],
         ],
     ],

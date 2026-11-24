@@ -134,11 +134,17 @@ prueba('la sede muestra sus 5 horarios de lunes a viernes', function () use ($mi
     igual(['10:00', '11:00', '20:00', '21:00', '22:00'], libres('sede', $miercoles));
 });
 
-prueba('a domicilio el sábado se atiende de 7:00 a 13:00 cada 30 minutos', function () use ($sabado) {
+prueba('a domicilio el sábado la última clase empieza a las 11:00 (cierra a las 12:00)', function () use ($sabado) {
     $horas = libres('domicilio', $sabado);
     igual('07:00', $horas[0]);
-    igual('13:00', end($horas));
-    igual(13, count($horas));
+    igual('11:00', end($horas));
+    igual(9, count($horas));
+});
+
+prueba('a domicilio de lunes a viernes la última clase empieza a las 20:00 (cierra a las 21:00)', function () use ($jueves) {
+    $horas = libres('domicilio', $jueves);
+    igual('06:30', $horas[0]);
+    igual('20:00', end($horas));
 });
 
 prueba('el domingo no hay horas', function () use ($domingo) {
